@@ -17,6 +17,7 @@
     "cypress": "cypress",
     "cypress:run": "cypress run --browser electron",
     "dev": "DEV_SERVER=true webpack serve --config config/webpack.config.js --mode=development",
+    "dev:csb": "CHROME_SERVICE=8000 DEV_SERVER=true webpack serve --config config/webpack.config.js --mode=development",
     "dev:beta": "BETA=true npm run dev",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint src cypress",

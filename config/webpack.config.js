@@ -151,7 +151,7 @@ const commonConfig = ({ dev }) => {
       // HMR flag
       hot: true,
       ...proxy({
-        env: 'prod-stable',
+        env: 'stage-stable',
         port: 1337,
         appUrl: [/^\/*$/, /^\/beta\/*$/, /^\/preview\/*$/],
         useProxy: true,
@@ -184,6 +184,15 @@ const commonConfig = ({ dev }) => {
               host: `http://localhost:${process.env.NAV_CONFIG}`,
             },
           }),
+          '/apps/cost-management-mfe': {
+            host: `http://localhost:8003`,
+          },
+          '/apps/cost-management': {
+            host: `http://localhost:8004`,
+          },
+          '/apps/hybrid-committed-spend': {
+            host: `http://localhost:8005`,
+          },
         },
       }),
     },
